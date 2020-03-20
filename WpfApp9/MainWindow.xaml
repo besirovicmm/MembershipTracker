@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfApp9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp9"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <TabControl>
+        <TabItem Header="Clanovi">
+            <DockPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" DockPanel.Dock="Bottom">
+                    <Button Content="Unesi clana" Click="Button_Click_1"/>
+                    <Button Content="Izbrisi clana" Click="Button_Click_2"/>
+                    <Button Content="Produzi Clanarinu" Click="Button_Click"/>
+                </StackPanel>
+                <DataGrid Name="dgClanovi" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" ColumnWidth="*">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Ime I Prezime" Binding="{Binding imeIPrezime}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            </DockPanel>
+        </TabItem>
+        <TabItem Header="Aktivne clanarine">
+            <DockPanel>
+                <DataGrid Name="dgClanarine" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" ColumnWidth="*">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Ime I Prezime" Binding="{Binding Key}"/>
+                        <DataGridTextColumn Header="Clanarina vazi do" Binding="{Binding Value}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </DockPanel>
+        </TabItem>
+        <TabItem Header="Termini">
+            
+        </TabItem>
+    </TabControl>
+</Window>
