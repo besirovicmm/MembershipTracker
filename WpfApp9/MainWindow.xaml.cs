@@ -57,7 +57,7 @@ namespace WpfApp9
                 vazececlanarine.TryGetValue(dgClanovi.SelectedItem as Clan, out produzi);
                 vazececlanarine.Remove(dgClanovi.SelectedItem as Clan);
                 produzi = produzi.Add(mesec);
-                MessageBox.Show($"{produzi}");
+                MessageBox.Show($"Produzena je clanarina do {produzi}");
                 vazececlanarine.Add(dgClanovi.SelectedItem as Clan, produzi);
             }
         }
