@@ -78,5 +78,15 @@ namespace WpfApp9
             } else
                 MessageBox.Show("Odaberite clana");
         }
+
+        private void Button_Click_22(object sender, RoutedEventArgs e)
+        {
+            if (dgClanarine.SelectedItem == null)
+            {
+                MessageBox.Show("ASD");
+            }
+            else
+                vazececlanarine.Remove(dgClanarine.SelectedItem as Clan);
+        }
     }
 }

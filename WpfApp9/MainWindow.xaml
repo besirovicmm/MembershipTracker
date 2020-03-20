@@ -12,7 +12,7 @@
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" DockPanel.Dock="Bottom">
                     <Button Content="Unesi clana" Click="Button_Click_1"/>
                     <Button Content="Izbrisi clana" Click="Button_Click_2"/>
-                    <Button Content="Produzi Clanarinu" Click="Button_Click"/>
+                    <Button Content="Aktiviraj clanarinu od 30 dana" Click="Button_Click"/>
                 </StackPanel>
                 <DataGrid Name="dgClanovi" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" ColumnWidth="*">
                 <DataGrid.Columns>
@@ -23,6 +23,10 @@
         </TabItem>
         <TabItem Header="Aktivne clanarine">
             <DockPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" DockPanel.Dock="Bottom">
+                    <Button Content="Ukini clanarinu" Click="Button_Click_22"/>
+                    <Button Content="Dodaj 30 dana" Click="Button_Click"/>
+                </StackPanel>
                 <DataGrid Name="dgClanarine" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" ColumnWidth="*">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Ime I Prezime" Binding="{Binding Key}"/>
