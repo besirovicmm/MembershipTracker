@@ -10,9 +10,9 @@
         <TabItem Header="Clanovi">
             <DockPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" DockPanel.Dock="Bottom">
-                    <Button Content="Unesi clana" Click="Button_Click_1"/>
-                    <Button Content="Izbrisi clana" Click="Button_Click_2"/>
-                    <Button Content="Aktiviraj clanarinu od 30 dana" Click="Button_Click"/>
+                    <Button Content="Unesi clana" Click="unosClana"/>
+                    <Button Content="Izbrisi clana" Click="ukloniClana"/>
+                    <Button Content="Aktiviraj clanarinu od 30 dana" Click="Dodaj_clanarinu"/>
                 </StackPanel>
                 <DataGrid Name="dgClanovi" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" ColumnWidth="*">
                 <DataGrid.Columns>
@@ -24,19 +24,16 @@
         <TabItem Header="Aktivne clanarine">
             <DockPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" DockPanel.Dock="Bottom">
-                    <Button Content="Ukini clanarinu" Click="Button_Click_22"/>
-                    <Button Content="Dodaj 30 dana" Click="Button_Click"/>
+                    <Button Content="Ukini clanarinu" Click="Prekini_clanarinu"/>
+                    <Button Content="Dodaj 30 dana" Click="Produzi_30"/>
                 </StackPanel>
                 <DataGrid Name="dgClanarine" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" ColumnWidth="*">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Ime I Prezime" Binding="{Binding Key}"/>
-                        <DataGridTextColumn Header="Clanarina vazi do" Binding="{Binding Value}"/>
+                        <DataGridTextColumn Header="Ime I Prezime" Binding="{Binding imeIPrezime}"/>
+                        <DataGridTextColumn Header="Clanarina" Binding="{Binding pocetakClanarine}"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </DockPanel>
-        </TabItem>
-        <TabItem Header="Termini">
-            
         </TabItem>
     </TabControl>
 </Window>

@@ -7,6 +7,11 @@ namespace WpfApp9
         public string Ime { get; set; }
         public string Prezime { get; set; }
 
+        public DateTime pocetakClanarine { get; set; }
+
+
+        public bool aktivan { get; set; }
+
         public string imeIPrezime
         {
             get
